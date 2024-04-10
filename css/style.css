@@ -1,0 +1,265 @@
+:root {
+  --bg-base: #86469C;
+  --font-100: #FFCDEA;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: var(--bg-base);
+}
+
+.scroll::-webkit-scrollbar {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #FFCDEA;
+}
+
+/* 
+
+
+  font-family: "Exo 2", sans-serif;
+  font-family: "Delius", cursive;
+
+*/
+header {
+  position: relative;
+  height: 70px;
+  width: 100%;
+}
+header .info {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 0 10px;
+}
+header .info .brand {
+  height: 100%;
+  width: 200px;
+  overflow: hidden;
+}
+header .info .brand a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+header .info .brand a img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .info .brand a h3 {
+  font-family: "Delius", cursive;
+  padding-left: 10px;
+  font-size: 2rem;
+  color: var(--font-100);
+}
+header .info nav {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .info nav ul {
+  display: flex;
+  gap: 10px;
+}
+header .info nav ul li {
+  list-style: none;
+}
+header .info nav ul li a {
+  border: 1px solid #BC7FCD;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: "Delius", cursive;
+  text-decoration: none;
+  color: var(--font-100);
+  font-size: 1.5rem;
+}
+header .info nav ul li a:hover, header .info nav ul li a.active {
+  background: #BC7FCD;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+main .wlc-card {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+main .wlc-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .wlc-card .info_web {
+  position: absolute;
+  margin-left: 20px;
+  bottom: 5rem;
+}
+main .wlc-card .info_web h1,
+main .wlc-card .info_web p {
+  color: #fff;
+}
+main .wlc-card .info_web h1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 3.4rem;
+}
+main .wlc-card .info_web p {
+  width: 50%;
+  margin-top: 3rem;
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.5rem;
+}
+main .sub-heading {
+  font-family: "Exo 2", sans-serif;
+  font-size: 3rem;
+  color: #BC7FCD;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+main .container {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  padding: 0 10rem;
+}
+main .card-wrapper {
+  position: relative;
+  background: rgba(255, 205, 234, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+main .card-wrapper h3 {
+  margin: 10px 0;
+  margin-left: 30px;
+  font-size: 2rem;
+  color: #86469C;
+}
+main .card-wrapper ul li {
+  margin: 0 20px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #FFCDEA;
+}
+main .card-wrapper ul li:last-child {
+  margin-bottom: 0px;
+}
+main .card-wrapper .flexbox {
+  display: flex;
+  gap: 10px;
+}
+main .card-wrapper .card_mission,
+main .card-wrapper a.card {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .card-wrapper .card_mission img,
+main .card-wrapper a.card img {
+  height: 100%;
+}
+main .card-wrapper .card_mission img.planet-thumb,
+main .card-wrapper a.card img.planet-thumb {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+main .card-wrapper .card_mission .card-name-item,
+main .card-wrapper a.card .card-name-item {
+  position: absolute;
+  bottom: 0;
+  height: 0%;
+  opacity: 0;
+  width: 100%;
+  background: rgba(134, 70, 156, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #FFCDEA;
+  transition: 0.4s ease;
+}
+main .card-wrapper .card_mission:hover .card-name-item,
+main .card-wrapper a.card:hover .card-name-item {
+  height: 100%;
+  opacity: 1;
+}
+main .card-wrapper .card_mission:last-child,
+main .card-wrapper a.card:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFCDEA;
+  font-size: 3rem;
+  background: rgba(87, 28, 63, 0.3);
+}
+main .card-wrapper .card_mission.planet,
+main .card-wrapper a.card.planet {
+  background: #000;
+}
+
+footer {
+  position: relative;
+  height: 70px;
+  margin-top: 30px;
+}
+footer .info {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-100);
+  font-size: 1.3rem;
+}
+footer .info a {
+  padding-left: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--font-100);
+}
+
+.bottomBar {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #BC7FCD, transparent);
+}
+
+.topBar {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #BC7FCD, transparent);
+}/*# sourceMappingURL=style.css.map */

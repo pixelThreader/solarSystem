@@ -1,0 +1,299 @@
+:root {
+    --bg-base: #86469C;
+    --font-100: #FFCDEA;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: var(--bg-base);
+}
+
+.scroll::-webkit-scrollbar {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 7px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #FFCDEA;
+}
+
+/* 
+
+
+  font-family: "Exo 2", sans-serif;
+  font-family: "Delius", cursive;
+
+*/
+
+
+header {
+    position: relative;
+    height: 70px;
+    width: 100%;
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        padding: 0 10px;
+
+        .brand {
+            height: 100%;
+            width: 200px;
+            overflow: hidden;
+
+            a {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    font-family: "Delius", cursive;
+                    padding-left: 10px;
+                    font-size: 2rem;
+                    color: var(--font-100);
+                }
+            }
+        }
+
+        nav {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul {
+                display: flex;
+                gap: 10px;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        border: 1px solid #BC7FCD;
+                        border-radius: 8px;
+                        padding: 10px;
+                        font-family: "Delius", cursive;
+                        text-decoration: none;
+                        color: var(--font-100);
+                        font-size: 1.5rem;
+
+                        &:hover,
+                        &.active {
+                            background: #BC7FCD;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+main {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 10px;
+
+    .wlc-card {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .info_web {
+            position: absolute;
+            margin-left: 20px;
+            bottom: 5rem;
+
+            h1,
+            p {
+                color: #fff;
+            }
+
+            h1 {
+                font-family: "Exo 2", sans-serif;
+                font-size: 3.4rem;
+            }
+
+            p {
+                width: 50%;
+                margin-top: 3rem;
+                font-family: "Exo 2", sans-serif;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .sub-heading {
+        font-family: "Exo 2", sans-serif;
+        font-size: 3rem;
+        color: #BC7FCD;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        position: relative;
+        margin-top: 30px;
+        width: 100%;
+        padding: 0 10rem;
+    }
+
+    .card-wrapper {
+        position: relative;
+        background: rgba($color: #FFCDEA, $alpha: .3);
+        padding: 10px;
+        border-radius: 10px;
+
+        h3 {
+            margin: 10px 0;
+            margin-left: 30px;
+            font-size: 2rem;
+            color: #86469C;
+        }
+
+        ul {
+
+            li {
+                margin: 0 20px;
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+                color: #FFCDEA;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .flexbox {
+            display: flex;
+            gap: 10px;
+        }
+
+        .card_mission,
+        a.card {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            object-fit: contain;
+
+            img {
+                height: 100%;
+
+                &.planet-thumb {
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+
+            .card-name-item {
+                position: absolute;
+                bottom: 0;
+                height: 0%;
+                opacity: 0;
+                width: 100%;
+                background: rgba($color: #86469C, $alpha: .8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+                color: #FFCDEA;
+                transition: .4s ease;
+            }
+
+            &:hover {
+                .card-name-item {
+                    height: 100%;
+                    opacity: 1;
+                }
+            }
+
+            &:last-child {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #FFCDEA;
+                font-size: 3rem;
+                background: rgba($color: #571c3f, $alpha: .3);
+            }
+
+            &.planet {
+                background: #000;
+            }
+        }
+    }
+}
+
+
+footer {
+    position: relative;
+    height: 70px;
+    margin-top: 30px;
+
+    .info {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--font-100);
+        font-size: 1.3rem;
+
+        a {
+            padding-left: 5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: var(--font-100);
+        }
+    }
+}
+
+.bottomBar {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #BC7FCD, transparent);
+}
+
+.topBar {
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #BC7FCD, transparent);
+}
