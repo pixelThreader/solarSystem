@@ -37,15 +37,6 @@ body {
     width: 100%;
 }
 
-/* 
-
-
-  font-family: "Exo 2", sans-serif;
-  font-family: "Delius", cursive;
-
-*/
-
-
 header {
     position: relative;
     height: 70px;
@@ -209,6 +200,13 @@ main {
             color: #86469C;
         }
 
+        p {
+            padding: 20px;
+            font-size: 1.5rem;
+            color: #FFCDEA;
+            line-height: 2.6rem;
+        }
+
         ul {
 
             li {
@@ -353,8 +351,19 @@ main {
             }
         }
     }
-}
 
+    .by-w {
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            position: absolute;
+            top: 0%;
+        }
+    }
+}
 
 footer {
     position: relative;

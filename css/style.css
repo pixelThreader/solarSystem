@@ -38,13 +38,6 @@ body {
   width: 100%;
 }
 
-/* 
-
-
-  font-family: "Exo 2", sans-serif;
-  font-family: "Delius", cursive;
-
-*/
 header {
   position: relative;
   height: 70px;
@@ -186,6 +179,12 @@ main .card-wrapper h3 {
   font-size: 2rem;
   color: #86469C;
 }
+main .card-wrapper p {
+  padding: 20px;
+  font-size: 1.5rem;
+  color: #FFCDEA;
+  line-height: 2.6rem;
+}
 main .card-wrapper ul li {
   margin: 0 20px;
   margin-bottom: 10px;
@@ -311,6 +310,16 @@ main .web-card-wrapper .web-card .web-card-text {
 main .web-card-wrapper .web-card:hover .web-card-text {
   height: 100%;
   opacity: 1;
+}
+main .by-w {
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .by-w img {
+  height: 100%;
+  position: absolute;
+  top: 0%;
 }
 
 footer {
