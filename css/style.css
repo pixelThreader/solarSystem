@@ -32,6 +32,12 @@ body {
   background: #FFCDEA;
 }
 
+.planet-thumb {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+}
+
 /* 
 
 
@@ -102,11 +108,30 @@ header .info nav ul li a:hover, header .info nav ul li a.active {
   background: #BC7FCD;
 }
 
+section.breadcrumb {
+  height: 60px;
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  color: #FFCDEA;
+}
+section.breadcrumb .breadcrumb-item {
+  position: relative;
+  font-size: 1.3rem;
+  margin: 0 13px;
+  color: #7fd975;
+  text-decoration: none;
+}
+
 main {
   position: relative;
   width: 100%;
   padding: 0 20px;
   margin-top: 10px;
+}
+main.breadNav {
+  margin-top: 0px;
 }
 main .wlc-card {
   position: relative;
@@ -188,12 +213,6 @@ main .card-wrapper .card_mission img,
 main .card-wrapper a.card img {
   height: 100%;
 }
-main .card-wrapper .card_mission img.planet-thumb,
-main .card-wrapper a.card img.planet-thumb {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 100%;
-}
 main .card-wrapper .card_mission .card-name-item,
 main .card-wrapper a.card .card-name-item {
   position: absolute;
@@ -226,6 +245,72 @@ main .card-wrapper a.card:last-child {
 main .card-wrapper .card_mission.planet,
 main .card-wrapper a.card.planet {
   background: #000;
+}
+main .heading-banner {
+  position: relative;
+  height: 16rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #BC7FCD;
+  border-radius: 20px;
+  margin-top: 0;
+}
+main .heading-banner h1 {
+  font-size: 3rem;
+  color: #FFCDEA;
+}
+main .web-card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .web-card-wrapper .web-card {
+  position: relative;
+  height: 340px;
+  width: 270px;
+  border-radius: 10px;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 0 10px 2px #583771;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .web-card-wrapper .web-card img.h {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .web-card-wrapper .web-card img.l {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+main .web-card-wrapper .web-card .web-card-text {
+  position: absolute;
+  bottom: 0;
+  height: 0%;
+  opacity: 0;
+  width: 100%;
+  background: rgba(134, 70, 156, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #FFCDEA;
+  transition: 0.4s ease;
+}
+main .web-card-wrapper .web-card:hover .web-card-text {
+  height: 100%;
+  opacity: 1;
 }
 
 footer {

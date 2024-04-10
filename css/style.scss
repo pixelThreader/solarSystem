@@ -32,6 +32,11 @@ body {
     background: #FFCDEA;
 }
 
+.planet-thumb {
+    object-fit: contain;
+    width: 100%;
+}
+
 /* 
 
 
@@ -115,12 +120,32 @@ header {
     }
 }
 
+section.breadcrumb {
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: #FFCDEA;
+
+    .breadcrumb-item {
+        position: relative;
+        font-size: 1.3rem;
+        margin: 0 13px;
+        color: #7fd975;
+        text-decoration: none;
+    }
+}
 
 main {
     position: relative;
     width: 100%;
     padding: 0 20px;
     margin-top: 10px;
+
+    &.breadNav {
+        margin-top: 0px;
+    }
 
     .wlc-card {
         position: relative;
@@ -214,11 +239,6 @@ main {
 
             img {
                 height: 100%;
-
-                &.planet-thumb {
-                    object-fit: contain;
-                    width: 100%;
-                }
             }
 
             .card-name-item {
@@ -254,6 +274,82 @@ main {
 
             &.planet {
                 background: #000;
+            }
+        }
+    }
+
+    .heading-banner {
+        position: relative;
+        height: 16rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #BC7FCD;
+        border-radius: 20px;
+        margin-top: 0;
+
+        h1 {
+            font-size: 3rem;
+            color: #FFCDEA;
+        }
+    }
+
+    .web-card-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .web-card {
+            position: relative;
+            height: 340px;
+            width: 270px;
+            border-radius: 10px;
+            background: #000;
+            overflow: hidden;
+            box-shadow: 0 0 10px 2px #583771;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img.h {
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            img.l {
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 0%;
+                transform: translate(-50%, -50%);
+            }
+
+            .web-card-text {
+                position: absolute;
+                bottom: 0;
+                height: 0%;
+                opacity: 0;
+                width: 100%;
+                background: rgba($color: #86469C, $alpha: .8);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+                color: #FFCDEA;
+                transition: .4s ease;
+            }
+
+            &:hover {
+                .web-card-text {
+                    height: 100%;
+                    opacity: 1;
+                }
             }
         }
     }
