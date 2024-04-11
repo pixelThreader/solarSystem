@@ -321,6 +321,46 @@ main .by-w img {
   position: absolute;
   top: 0%;
 }
+main .imageithumb-blog {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+main .imageithumb-blog img {
+  height: 100%;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+article {
+  padding: 20px;
+  border-radius: 10px;
+}
+article h1 {
+  margin-bottom: 40px;
+  font-size: 3.3rem;
+  color: #fff;
+  text-align: center;
+}
+article h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: antiquewhite;
+}
+article p {
+  padding: 0 30px;
+  font-size: 1.6rem;
+  color: #FFCDEA;
+  margin-bottom: 30px;
+}
 
 footer {
   position: relative;
